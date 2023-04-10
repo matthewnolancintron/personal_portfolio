@@ -1,7 +1,30 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.woff2') format('woff2'), 
+         url('fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.woff') format('woff');
+
+    font-family: 'Acme';
+    src: url('fonts/Acme/Acme-Regular.woff') format('woff');
+  }
+  
+
 body{
     background-color: black;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
 }
+
+
+.AcmeFont{
+    font-family: 'Acme', sans-serif; /* Use the custom font family */
+}
+
+
+.italic {
+    font-family: 'Open Sans Italic', sans-serif;
+  }
 
 .dummy{
     color:white;
 }
+
