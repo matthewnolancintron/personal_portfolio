@@ -2,29 +2,173 @@
     font-family: 'Open Sans';
     src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.woff2') format('woff2'), 
          url('fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.woff') format('woff');
-
     font-family: 'Acme';
     src: url('fonts/Acme/Acme-Regular.woff') format('woff');
   }
   
-
 body{
     background-color: black;
     color: white;
     font-family: 'Open Sans',sans-serif;
 }
 
-
 .AcmeFont{
     font-family: 'Acme', sans-serif; /* Use the custom font family */
 }
-
 
 .italic {
     font-family: 'Open Sans Italic', sans-serif;
   }
 
-.dummy{
-    color:white;
+i{
+  font-size: 2rem;
 }
 
+/* Reset default margin and padding for all elements */
+body, figure, h1, h2, p, ul, li, address, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  /* Set a default font size and line height */
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100vh; /* Set the height of the body to the viewport height for full-page height */
+}
+
+/* Set max-width for the page content */
+.container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  border:solid rgb(64, 65, 64) 10px;
+  padding: 50px;
+}
+
+/* Style the About Me section */
+.about-me {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  width:300px;
+  height: fit-content;
+  margin-bottom: 30px;
+  /* background-color: rgba(16, 102, 66, 0.466); */
+  padding: 10%;
+}
+
+.profile-picture {
+  width: 100%;
+}
+
+.profile-picture img {
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-picture-caption{
+  transform: translate(9px,-36px);
+  color:black
+}
+
+/* .about-me-content{
+
+} */
+
+.about-me-heading{
+  text-align: center;
+}
+
+/* .about-me-description{
+ 
+} */
+
+.about-me-social-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.about-me-social-icons li {
+  text-decoration: none;
+  color: inherit;
+}
+
+.devicon-github-original-wordmark {
+  color: white; /* Set the color to white */
+}
+
+/* Style the My Work section */
+#my-work {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.project-card {
+  width:300px;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  border:solid white 1px;
+}
+
+.project-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.project-card img {
+  flex-basis: 100%;
+  max-width: 300px;
+  margin-bottom: 16px;
+}
+
+.project-card h2 {
+  flex-basis: 100%;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.project-links a {
+  margin-right: 16px;
+  border-radius: 3%;
+  background-color: darkgrey;
+}
+
+/* Style the Contact Me section */
+#contact-me {
+  margin-bottom: 32px;
+}
+
+.contact-me-icons a {
+  margin-right: 16px;
+}
+
+/* Add media queries for responsive design */
+@media (min-width: 768px) {
+  .about-me-content {
+      flex-basis: 50%;
+      padding-left: 32px;
+  }
+
+  .project-card img {
+      flex-basis: 50%;
+      max-width: 50%;
+      margin-bottom: 0;
+      margin-right: 16px;
+  }
+}
