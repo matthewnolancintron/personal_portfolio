@@ -1,31 +1,40 @@
 @font-face {
-    font-family: 'Open Sans';
-    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.woff2') format('woff2'), 
-         url('fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.woff') format('woff');
-    font-family: 'Acme';
-    src: url('fonts/Acme/Acme-Regular.woff') format('woff');
-  }
-  
-body{
-    background-color: black;
-    color: white;
-    font-family: 'Open Sans',sans-serif;
+  font-family: 'Open Sans';
+  src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.woff2') format('woff2'),
+    url('fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.woff') format('woff');
+  font-family: 'Acme';
+  src: url('fonts/Acme/Acme-Regular.woff') format('woff');
 }
 
-.AcmeFont{
-    font-family: 'Acme', sans-serif; /* Use the custom font family */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.AcmeFont {
+  font-family: 'Acme', sans-serif;
+  /* Use the custom font family */
 }
 
 .italic {
-    font-family: 'Open Sans Italic', sans-serif;
-  }
+  font-family: 'Open Sans Italic', sans-serif;
+}
 
-i{
+i {
   font-size: 2rem;
 }
 
 /* Reset default margin and padding for all elements */
-body, figure, h1, h2, p, ul, li, address, a {
+body,
+figure,
+h1,
+h2,
+p,
+ul,
+li,
+address,
+a {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
@@ -35,26 +44,27 @@ body {
   /* Set a default font size and line height */
   font-size: 16px;
   line-height: 1.5;
-  height: 100vh; /* Set the height of the body to the viewport height for full-page height */
+  height: 100vh;
+  /* Set the height of the body to the viewport height for full-page height */
 }
 
 /* Set max-width for the page content */
 .container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  border:solid rgb(64, 65, 64) 10px;
+  align-items: center;
+  border: solid rgb(64, 65, 64) 10px;
   padding: 50px;
 }
 
 /* Style the About Me section */
-.about-me {
+.about {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  width:300px;
+  align-items: center;
+  width: 300px;
   height: fit-content;
   margin-bottom: 30px;
   /* background-color: rgba(16, 102, 66, 0.466); */
@@ -70,24 +80,20 @@ body {
   height: auto;
 }
 
-.profile-picture-caption{
-  transform: translate(9px,-36px);
-  color:black
+.profile-picture-caption {
+  transform: translate(9px, -36px);
+  color: black
 }
 
-/* .about-me-content{
-
-} */
-
-.about-me-heading{
+.about-heading {
   text-align: center;
 }
 
-/* .about-me-description{
- 
-} */
+.about-description {
+  text-align: center;
+}
 
-.about-me-social-icons{
+.about-icons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,13 +101,14 @@ body {
   margin-top: 20px;
 }
 
-.about-me-social-icons li {
+.about-icons li {
   text-decoration: none;
   color: inherit;
 }
 
 .devicon-github-original-wordmark {
-  color: white; /* Set the color to white */
+  color: white;
+  /* Set the color to white */
 }
 
 /* Style the My Work section */
@@ -110,25 +117,37 @@ body {
   text-align: center;
 }
 
-.project-card {
-  width:300px;
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-  border:solid white 1px;
+#projects{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-column-gap:2em;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-evenly;
 }
 
-.project-links{
+.project-card {
+  width: 300px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  border: solid white 1px;
+  box-shadow: 0 5px 10px grey;
+}
+
+.project-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  margin: 4% 8%;
+
 }
 
 .project-card img {
-  flex-basis: 100%;
-  max-width: 300px;
+  width: 100%;
   margin-bottom: 16px;
 }
 
@@ -141,34 +160,56 @@ body {
 .project-description {
   font-size: 16px;
   margin-bottom: 16px;
+  padding: 10%;
 }
 
 .project-links a {
   margin-right: 16px;
-  border-radius: 3%;
-  background-color: darkgrey;
+  background-color: lightgray;
+  border-width: 1px;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  border-radius: .375rem;
+  border-width: 0.1rems;
+  cursor: pointer;
+  font-size: .875rem;
+  padding: .25rem 0.5rem;
+  text-decoration-line: none;
 }
 
-/* Style the Contact Me section */
-#contact-me {
-  margin-bottom: 32px;
+.project-links a:hover {
+  color: #fff;
+  background-color: darkgray;
 }
 
-.contact-me-icons a {
-  margin-right: 16px;
+
+/* Style the Contact section */
+#contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Add media queries for responsive design */
-@media (min-width: 768px) {
-  .about-me-content {
-      flex-basis: 50%;
-      padding-left: 32px;
-  }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* Tablet layout styles go here */
 
-  .project-card img {
-      flex-basis: 50%;
-      max-width: 50%;
-      margin-bottom: 0;
-      margin-right: 16px;
-  }
+/* Style the My Work section */
+#projects{
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
+}
+
+.project-card:nth-child(5){
+  grid-column: 1 / 3;
+}
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  /* Desktop layout styles go here */
 }
