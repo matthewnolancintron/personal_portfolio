@@ -14,29 +14,30 @@
 
 <body>
     <main class="container">
-        <section class="about-me">
+        <section class="about">
             <figure class="profile-picture">
                 <!-- SVG code for the placeholder image -->
-                <img src="https://placeholder.co/300x200" alt="Matthew Shane Nolan-Cintron">
+                <picture>
+                    <source media="((min-width: 768px) and (max-width:1200px))" srcset="https://placeholder.co/600x400">
+                    <source media="(min-width: 1200px)" srcset="https://placeholder.co/900x600">
+                    <img src="https://placeholder.co/300x200" alt="Matthew Shane Nolan-Cintron">
+                </picture>
                 <figcaption class="profile-picture-caption AcmeFont">Matthew Shane Nolan-Cintron</figcaption>
             </figure>
-        
-            <article class="about-me-content">
-                <h1 class="about-me-heading">About Me</h1>
-                <p class="about-me-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies
-                    pharetra dolor, vel efficitur elit malesuada in. Sed eu quam vel mauris vestibulum dignissim a non mi.
-                    Etiam pellentesque, eros ut dignissim egestas, enim nisi aliquet tortor, et tristique augue massa eu
-                    elit.</p>
-                <ul class="about-me-social-icons">
+            <article class="about-content">
+                <h1 class="about-heading">About</h1>
+                <p class="about-description">
+                    This portfoilo showcases my work and skills, related to making web applications 
+                </p>
+                <ul class="about-icons">
                     <li><a href="https://github.com/matthewnolancintron" target="_blank"> <i class="devicon-github-original-wordmark"></i></a></li>
                 </ul>
             </article>
-
-
         </section>
         
         <section id="my-work">
             <h1>My Work</h1>
+            <div id="projects">
             <article class="project-card">
                 <img src="https://placeholder.co/300x200" alt="Project name">
                 <h2>Project 1</h2>
@@ -47,6 +48,43 @@
                 </aside>
             </article>
             <!-- Add more project cards as needed -->
+            <article class="project-card">
+                <img src="https://placeholder.co/300x200" alt="Project name">
+                <h2>Project 2</h2>
+                <p class="project-description">Write a short concise description of the project here.</p>
+                <aside class="project-links">
+                    <a href="https://github.com/matthewnolancintron/project or repo name" target="_blank">View Code</a>
+                    <a href="https://matthewnolancintron.github.io/project or repo name/" target="_blank">Live Preview</a>
+                </aside>
+            </article>
+            <article class="project-card">
+                <img src="https://placeholder.co/300x200" alt="Project name">
+                <h2>Project 3</h2>
+                <p class="project-description">Write a short concise description of the project here.</p>
+                <aside class="project-links">
+                    <a href="https://github.com/matthewnolancintron/project or repo name" target="_blank">View Code</a>
+                    <a href="https://matthewnolancintron.github.io/project or repo name/" target="_blank">Live Preview</a>
+                </aside>
+            </article>
+            <article class="project-card">
+                <img src="https://placeholder.co/300x200" alt="Project name">
+                <h2>Project 4</h2>
+                <p class="project-description">Write a short concise description of the project here.</p>
+                <aside class="project-links">
+                    <a href="https://github.com/matthewnolancintron/project or repo name" target="_blank">View Code</a>
+                    <a href="https://matthewnolancintron.github.io/project or repo name/" target="_blank">Live Preview</a>
+                </aside>
+            </article>
+            <article class="project-card">
+                <img src="https://placeholder.co/300x200" alt="Project name">
+                <h2>Project 5</h2>
+                <p class="project-description">Write a short concise description of the project here.</p>
+                <aside class="project-links">
+                    <a href="https://github.com/matthewnolancintron/project or repo name" target="_blank">View Code</a>
+                    <a href="https://matthewnolancintron.github.io/project or repo name/" target="_blank">Live Preview</a>
+                </aside>
+            </article>
+        </div>
         </section>
 
         <section id="contact-info">
@@ -55,5 +93,4 @@
         </section>
     </main>
 </body>
-
 </html>
